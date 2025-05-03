@@ -1,0 +1,19 @@
+[
+  {
+    "Nombre": "Laura",
+    "Correo": "laura@example.com"
+  },
+  {
+    "Nombre": "Mateo",
+    "Correo": "mateo@example.com"
+  },
+  {
+    "Nombre": "Sofía",
+    "Correo": "sofia@example.com"
+  },
+  {
+    "Nombre": "Daniel",
+    "Correo": "daniel@example.com"
+  }
+  
+]
