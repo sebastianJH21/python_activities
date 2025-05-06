@@ -2,4 +2,4 @@
 .venv
 
 # Archivos de configuración local
-.streamlit/secrets.toml
+# .streamlit/secrets.toml
