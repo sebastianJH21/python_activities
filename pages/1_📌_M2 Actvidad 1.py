@@ -380,9 +380,9 @@ st.code(dbCode)
 st.markdown('<h4 margin-top: 0px;">Código:</h4>', unsafe_allow_html=True)
 
 st.code(code, language="python")
-uri = "mongodb+srv://python:IMtMS5M3Ia81SltN@pythonactivities.9pcn5qh.mongodb.net/?retryWrites=true&w=majority&appName=pythonactivities&ssl=false"
 
 
+uri = st.secrets["mongo"]["uri"]
 try:
     client = MongoClient(uri, serverSelectionTimeoutMS=5000)
     client.server_info()  # fuerza conexión
