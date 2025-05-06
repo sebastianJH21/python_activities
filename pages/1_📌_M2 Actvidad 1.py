@@ -45,9 +45,9 @@ code = """
     st.dataframe(df)
 """
 
-st.markdown('<h3 margin-top: 0px;">DataFrame desde un Diccionario</h3>', unsafe_allow_html=True)
+# st.markdown('<h4 margin-top: 0px;">DataFrame de libros</h4>', unsafe_allow_html=True)
 
-st.markdown('<h4 margin-top: 0px;">Código:</h3>', unsafe_allow_html=True)
+st.markdown('<h4 margin-top: 0px;">Código:</h4>', unsafe_allow_html=True)
 
 st.code(code, language="python")
 
@@ -60,7 +60,7 @@ libros = {
 
 df = pd.DataFrame(libros)
 
-st.markdown('<h4 margin-top: 0px;">DataFrame de Libros:</h3>', unsafe_allow_html=True)
+# st.markdown('<h4 margin-top: 0px;">DataFrame de Libros:</h4>', unsafe_allow_html=True)
 st.dataframe(df)
 
 
@@ -79,9 +79,9 @@ code = """
     st.dataframe(df)
 """
 
-st.markdown('<h3 margin-top: 0px;">DataFrame desde una Lista de Diccionarios</h3>', unsafe_allow_html=True)
+st.markdown('<h4 margin-top: 0px;">DataFrame desde una lista de diccionarios</h4>', unsafe_allow_html=True)
 
-st.markdown('<h4 margin-top: 0px;">Código:</h3>', unsafe_allow_html=True)
+st.markdown('<h4 margin-top: 0px;">Código:</h4>', unsafe_allow_html=True)
 
 st.code(code, language="python")
 
@@ -91,7 +91,8 @@ ciudades = [{"Nombre": "Tokio", "Población": 37977000, "País": "Japón"},
 
 df = pd.DataFrame(ciudades)
 
-st.markdown('<h4 margin-top: 0px;">Información de Ciudades:</h3>', unsafe_allow_html=True)
+
+st.markdown('<h4 margin-top: 0px;">Información de ciudades:</h4>', unsafe_allow_html=True)
 st.dataframe(df)
 
 
@@ -112,9 +113,9 @@ code = """
     st.dataframe(df);
 """
 
-st.markdown('<h3 margin-top: 0px;">DataFrame desde una Lista de Listas</h3>', unsafe_allow_html=True)
+st.markdown('<h4 margin-top: 0px;">DataFrame desde una Lista de Listas</h4>', unsafe_allow_html=True)
 
-st.markdown('<h4 margin-top: 0px;">Código:</h3>', unsafe_allow_html=True)
+st.markdown('<h4 margin-top: 0px;">Código:</h4>', unsafe_allow_html=True)
 
 st.code(code, language="python")
 
@@ -126,7 +127,7 @@ productos = [
 
 df = pd.DataFrame( productos, columns=["Nombre", "Precio", "Cantidad"] )
 
-st.markdown('<h4 margin-top: 0px;">Productos en Inventario:</h3>', unsafe_allow_html=True)
+st.markdown('<h4 margin-top: 0px;">Productos en Inventario:</h4>', unsafe_allow_html=True)
 st.dataframe(df);
 
 # Series
@@ -149,25 +150,25 @@ code = """
     st.dataframe(df)
 """
 
-st.markdown('<h3 margin-top: 0px;">DataFrame desde Series</h3>', unsafe_allow_html=True)
+st.markdown('<h4 margin-top: 0px;">DataFrame desde series</h4>', unsafe_allow_html=True)
 
-st.markdown('<h4 margin-top: 0px;">Código:</h3>', unsafe_allow_html=True)
+st.markdown('<h4 margin-top: 0px;">Código:</h4>', unsafe_allow_html=True)
 
 st.code(code, language="python")
 
-sNombres = pd.Series(["Juan", "Camilo", "Andrés", "Mariana"])
-sEdades = pd.Series([10, 27, 21, 21])
-sCiudaes = pd.Series(["Medellín", "Cali", "Bucaramanga", "Medellín"])
+sNombres = pd.Series(["Laura", "Santiago", "Valentina", "Mateo"])
+sEdades = pd.Series([32, 45, 29, 38])
+sCiudades = pd.Series(["Bogotá", "Cartagena", "Manizales", "Barranquilla"])
 
 datos = {
   "Nombre¨": sNombres,
   "Edades": sEdades,
-  "Ciudades": sCiudaes
+  "Ciudades": sCiudades
 }
 
 df = pd.DataFrame(datos)
 
-st.markdown('<h4 margin-top: 0px;">Datos de Personas:</h3>', unsafe_allow_html=True)
+st.markdown('<h4 margin-top: 0px;">Datos de personas:</h4>', unsafe_allow_html=True)
 st.dataframe(df)
 
 # Archivo CSV
@@ -181,16 +182,16 @@ code = """
 
     st.dataframe(df)    
 """
-st.markdown('<h3 margin-top: 0px;">DataFrame desde CSV</h3>', unsafe_allow_html=True)
+st.markdown('<h4 margin-top: 0px;">DataFrame desde CSV</h4>', unsafe_allow_html=True)
 
-st.markdown('<h4 margin-top: 0px;">Código:</h3>', unsafe_allow_html=True)
+st.markdown('<h4 margin-top: 0px;">Código:</h4>', unsafe_allow_html=True)
 
 st.code(code, language="python")
 
 #Tomamos la ruta relativa del archivo a leer
 df = pd.read_csv("static/datasets/data.csv")
 
-st.markdown('<h4 margin-top: 0px;">Datos desde CSV:</h3>', unsafe_allow_html=True)
+st.markdown('<h4 margin-top: 0px;">Datos desde CSV:</h4>', unsafe_allow_html=True)
 
 st.dataframe(df)
 
@@ -206,16 +207,16 @@ code = """
     st.dataframe(df)    
 """
 
-st.markdown('<h3 margin-top: 0px;">DataFrame desde Excel</h3>', unsafe_allow_html=True)
+st.markdown('<h4 margin-top: 0px;">DataFrame desde excel</h4>', unsafe_allow_html=True)
 
-st.markdown('<h4 margin-top: 0px;">Código:</h3>', unsafe_allow_html=True)
+st.markdown('<h4 margin-top: 0px;">Código:</h4>', unsafe_allow_html=True)
 
 st.code(code, language="python")
 
 #Tomamos la ruta relativa del archivo a leer
 df = pd.read_excel("static/datasets/data.xlsx")
 
-st.markdown('<h4 margin-top: 0px;">Datos desde Excel:</h3>', unsafe_allow_html=True)
+st.markdown('<h4 margin-top: 0px;">Datos desde excel:</h4>', unsafe_allow_html=True)
 st.dataframe(df)
 
 
@@ -231,15 +232,15 @@ ode = """
     st.dataframe(df)    
 """
 
-st.markdown('<h3 margin-top: 0px;">DataFrame desde JSON</h3>', unsafe_allow_html=True)
+st.markdown('<h4 margin-top: 0px;">DataFrame desde JSON</h4>', unsafe_allow_html=True)
 
-st.markdown('<h4 margin-top: 0px;">Código:</h3>', unsafe_allow_html=True)
+st.markdown('<h4 margin-top: 0px;">Código:</h4>', unsafe_allow_html=True)
 
 st.code(code, language="python")
 
 df = pd.read_json("static/datasets/data.json")
 
-st.markdown('<h4 margin-top: 0px;">Datos de Usuarios desde JSON:</h3>', unsafe_allow_html=True)
+st.markdown('<h4 margin-top: 0px;">Datos de Usuarios desde JSON:</h4>', unsafe_allow_html=True)
 st.dataframe(df)
 
 # URL
@@ -252,15 +253,15 @@ code = """
     st.dataframe(df)
 """
 
-st.markdown('<h3 margin-top: 0px;">DataFrame desde URL</h3>', unsafe_allow_html=True)
+st.markdown('<h4 margin-top: 0px;">DataFrame desde URL</h4>', unsafe_allow_html=True)
 
-st.markdown('<h4 margin-top: 0px;">Código:</h3>', unsafe_allow_html=True)
+st.markdown('<h4 margin-top: 0px;">Código:</h4>', unsafe_allow_html=True)
 
 st.code(code, language="python")
 
 df = pd.read_csv("https://people.sc.fsu.edu/~jburkardt/data/csv/hw_200.csv")
 
-st.markdown('<h4 margin-top: 0px;">Datos desde URL:</h3>', unsafe_allow_html=True)
+st.markdown('<h4 margin-top: 0px;">Datos desde URL:</h4>', unsafe_allow_html=True)
 st.dataframe(df)
 
 # SQLITE
@@ -269,7 +270,10 @@ code = """
     import pandas as pd
     import sqlite3
 
-    data = {"Nombre": ["Ana", "Luis", "Juan"], "Edad": [5.0, 4.3, 3.0]}
+    data = {
+        "Nombre": ["Carla", "Esteban", "Lucía", "Fernando"],
+        "Edad": [6.5, 7.0, 5.8, 6.2]
+    }
     df = pd.DataFrame(data)
 
     conn = sqlite3.connect("estudiantes.db")
@@ -283,9 +287,9 @@ code = """
     conn.close()
 """
 
-st.markdown('<h3 margin-top: 0px;">DataFrame desde SQLite</h3>', unsafe_allow_html=True)
+st.markdown('<h4 margin-top: 0px;">DataFrame desde SQLite</h4>', unsafe_allow_html=True)
 
-st.markdown('<h4 margin-top: 0px;">Código:</h3>', unsafe_allow_html=True)
+st.markdown('<h4 margin-top: 0px;">Código:</h4>', unsafe_allow_html=True)
 
 st.code(code, language="python")
 
@@ -298,7 +302,7 @@ df.to_sql("estudiantes", conn, if_exists='replace', index=False)
 
 df_sql = pd.read_sql_query("SELECT * FROM estudiantes", conn)
 
-st.markdown('<h4 margin-top: 0px;">Datos desde SQLite:</h3>', unsafe_allow_html=True)
+st.markdown('<h4 margin-top: 0px;">Datos desde SQLite:</h4>', unsafe_allow_html=True)
 st.dataframe(df_sql)
 
 conn.close()
@@ -320,9 +324,9 @@ code = """
     st.dataframe(df)
 """
 
-st.markdown('<h3 margin-top: 0px;">DataFrame desde Numpy</h3>', unsafe_allow_html=True)
+st.markdown('<h4 margin-top: 0px;">DataFrame desde Numpy</h4>', unsafe_allow_html=True)
 
-st.markdown('<h4 margin-top: 0px;">Código:</h3>', unsafe_allow_html=True)
+st.markdown('<h4 margin-top: 0px;">Código:</h4>', unsafe_allow_html=True)
 
 st.code(code, language="python")
 
@@ -334,7 +338,7 @@ numeros = np.array([
 
 df = pd.DataFrame(numeros)
 
-st.markdown('<h4 margin-top: 0px;">Datos desde NumPy:</h3>', unsafe_allow_html=True)
+st.markdown('<h4 margin-top: 0px;">Datos desde numPy:</h4>', unsafe_allow_html=True)
 st.dataframe(df)
 
 # FIREBASE
@@ -344,9 +348,10 @@ dbCode = """
 
     #Creamos la colección con el siguiente comando
     db.usuarios.insertMany([
-        { nombre: "Juan", ciudad: "Medellín" },
-        { nombre: "Camilo", ciudad: "Cali" },
-        { nombre: "Mariana", ciudad: "Bucaramanga" }
+        { nombre: "Laura", ciudad: "Bogotá" },
+        { nombre: "Andrés", ciudad: "Manizales" },
+        { nombre: "Valeria", ciudad: "Cartagena" },
+        { nombre: "Tomás", ciudad: "Pereira" }
     ])
 """
 
@@ -355,30 +360,40 @@ code = """
     import pandas as pd
     from pymongo import MongoClient
 
-    client = MongoClient()
+    uri = "mongodb+srv://python:<IMtMS5M3Ia81SltN>@pythonactivities.9pcn5qh.mongodb.net/?retryWrites=true&w=majority&appName=pythonactivities"
 
-    client = MongoClient("mongodb://localhost:27017/")
-    db = client["Tecnologia"]
-    collection = db["usuarios"]
+    client = MongoClient(uri)
+
+    db = client["python"]
+    collection = db["activity_1"]
 
     df = pd.DataFrame(list(collection.find()))
     st.dataframe(df)
 """
 
-st.markdown('<h3 margin-top: 0px;">DataFrame desde MongoDB</h3>', unsafe_allow_html=True)
+st.markdown('<h4 margin-top: 0px;">DataFrame desde MongoDB</h4>', unsafe_allow_html=True)
 
-st.markdown('<h4 margin-top: 0px;">Código MongoDB:</h3>', unsafe_allow_html=True)
+st.markdown('<h4 margin-top: 0px;">Código MongoDB:</h4>', unsafe_allow_html=True)
 
 st.code(dbCode)
 
-st.markdown('<h4 margin-top: 0px;">Código:</h3>', unsafe_allow_html=True)
+st.markdown('<h4 margin-top: 0px;">Código:</h4>', unsafe_allow_html=True)
 
 st.code(code, language="python")
+uri = "mongodb+srv://python:IMtMS5M3Ia81SltN@pythonactivities.9pcn5qh.mongodb.net/?retryWrites=true&w=majority&appName=pythonactivities"
 
-client = MongoClient()
 
-client = MongoClient("mongodb://localhost:27017/")
-db = client["Tecnologia"]
-collection = db["usuarios"]
+try:
+    client = MongoClient(uri, serverSelectionTimeoutMS=5000)
+    client.server_info()  # fuerza conexión
+    st.success("✅ Conectado a MongoDB")
+except Exception as e:
+    st.error(f"❌ No se pudo conectar: {e}")
+
+client = MongoClient(uri)
+db = client["python"]
+collection = db["activity_1"]
 
 df = pd.DataFrame(list(collection.find()))
+
+st.dataframe(df)
