@@ -382,7 +382,7 @@ st.markdown('<h4 margin-top: 0px;">Código:</h4>', unsafe_allow_html=True)
 st.code(code, language="python")
 
 
-uri = st.secrets["mongo"]["uri"]
+uri = st.secrets["mongo"]["uri"] 
 try:
     client = MongoClient(uri, serverSelectionTimeoutMS=5000)
     client.server_info()  # fuerza conexión
